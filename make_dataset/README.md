@@ -70,18 +70,3 @@ By default, only rows from the final pressure corrector are retained. The script
 reads the pressure patch metadata and uses exactly the same padding and crop
 coordinates for `U`.
 
-## Legacy script
-
-`dataset_pipeline_dp_rgh.py` constructs targets between adjacent physical time
-steps. It is retained only for provenance and is **not** the paper's authoritative
-pressure-corrector dataset pipeline.
-
-## Tests
-
-From this directory:
-
-```powershell
-python -m unittest discover -s tests -v
-```
-
-Only NumPy is required for dataset construction and these tests.

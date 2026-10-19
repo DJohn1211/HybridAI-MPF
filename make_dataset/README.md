@@ -21,8 +21,8 @@ dataset representation and are not normalized by this pipeline.
 
 ```powershell
 python dataset_pipeline_dp_rgh_new.py `
-  --dataset-root "D:\path\to\openfoam-cases" `
-  --out-root "D:\path\to\dp-rgh-patches"
+  --dataset-root "~\path\to\openfoam-cases" `
+  --out-root "~\path\to\dp-rgh-patches"
 ```
 
 Each OpenFOAM case is expected to contain `system/blockMeshDict`, numeric time
@@ -49,8 +49,8 @@ options. If case directories are named `Case1`, `Case2`, and so on, pass
 
 ```powershell
 python sanity_check.py `
-  --patch-root "D:\path\to\dp-rgh-patches" `
-  --report-json "D:\path\to\sanity-report.json"
+  --patch-root "~\path\to\dp-rgh-patches" `
+  --report-json "~\path\to\sanity-report.json"
 ```
 
 The command returns a non-zero exit status when a patch is malformed or no patch
@@ -61,9 +61,9 @@ and approximate pressure-equation consistency.
 
 ```powershell
 python dataset_pipeline_u_patch.py `
-  --dataset-root "D:\path\to\openfoam-cases" `
-  --dp-patch-root "D:\path\to\dp-rgh-patches" `
-  --out-root "D:\path\to\u-patches"
+  --dataset-root "~\path\to\openfoam-cases" `
+  --dp-patch-root "~\path\to\dp-rgh-patches" `
+  --out-root "~\path\to\u-patches"
 ```
 
 By default, only rows from the final pressure corrector are retained. The script
